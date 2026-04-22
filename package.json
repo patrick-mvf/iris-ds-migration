@@ -1,0 +1,17 @@
+{
+  "name": "@iris/tokens",
+  "version": "4.7.0",
+  "description": "Design tokens for the Iris Design System",
+  "main": "tokens/primitive.tokens.json",
+  "files": [
+    "tokens"
+  ],
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "iris",
+    "figma"
+  ],
+  "license": "UNLICENSED",
+  "private": true
+}
