@@ -29,6 +29,8 @@ Link this repo as a design-system source (**Organization Settings → Design Sys
 
 **Primary source of truth:** `semantic.tokens.json` — start here. It references the primitives and is what the component layer and live sites resolve against. `primitive.tokens.json` defines raw colour/size values; `contextual.light.tokens.json` maps semantic tokens to component roles (buttons, cards, inputs, etc.) for Light mode.
 
+**Reference components** live in [`examples/`](./examples) — `Button`, `Card`, `Input`, and a composed `PageTemplate` extracted directly from Figma. They consume the tokens via CSS custom properties (`var(--button/default, #4444ca)` etc.) and are the best place to pattern-match from when recreating components the system doesn't already ship.
+
 ## Live examples
 
 These production sites are built on Iris and are the best visual reference for recreating the system. Each uses a different brand set from `semantic.tokens.json` — switch via the `brand-element` variable in the contextual layer.
