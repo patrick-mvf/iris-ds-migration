@@ -7,13 +7,18 @@ This repo is intended to be linked into **Claude Design** as a design-system sou
 ## What's in here
 
 ```
-tokens/
-  primitive.tokens.json          # 879 tokens  — Colours + Size primitives
-  semantic.tokens.json           # 640 tokens  — System + per-brand semantic layers
-  contextual.light.tokens.json   # 238 tokens  — Component-level tokens, Light mode
+primitive.tokens.json          # 879 tokens — Colours + Size primitives
+semantic.tokens.json           # 640 tokens — System + per-brand semantic layers
+contextual.light.tokens.json   # 238 tokens — Component-level tokens, Light mode
+brands.json                    # Distilled per-brand palette/font/radius summary (6 brands)
+components.md                  # Catalog of all ~45 components Iris ships in production
+DESIGN.md                      # System overview (Google Labs design.md v1-alpha format)
+AGENTS.md                      # Brief for coding agents (Claude Design, Claude Code, etc.)
+examples/                      # 7 reference components (Button, Card, Input, PageTemplate,
+                               #   CtaCard, ProsCons, HighlightBox)
 ```
 
-All files are in the [W3C Design Tokens Community Group](https://tr.designtokens.org/format/) format, exported directly from Figma variables. Each token carries `$type`, `$value`, and Figma-specific metadata under `$extensions` (variable IDs, alias references, scopes).
+Token files are in the [W3C Design Tokens Community Group](https://tr.designtokens.org/format/) format, exported directly from Figma variables. Each token carries `$type`, `$value`, and Figma-specific metadata under `$extensions` (variable IDs, alias references, scopes).
 
 ## Brand coverage
 
@@ -27,9 +32,15 @@ Switch brands via the `brand-element` variable in the contextual layer.
 
 Link this repo as a design-system source (**Organization Settings → Design Systems → New → link GitHub repo**). Claude Design will read the tokens and automatically apply Iris's visual language to every new project.
 
-**Primary source of truth:** `semantic.tokens.json` — start here. It references the primitives and is what the component layer and live sites resolve against. `primitive.tokens.json` defines raw colour/size values; `contextual.light.tokens.json` maps semantic tokens to component roles (buttons, cards, inputs, etc.) for Light mode.
+**Start in [`DESIGN.md`](./DESIGN.md)** for the system overview. It follows the [Google Labs `design.md`](https://github.com/google-labs-code/design.md) v1-alpha spec — YAML front matter of Core/System tokens + prose in the prescribed 8-section order (Overview → Colors → Typography → Layout → Elevation & Depth → Shapes → Components → Do's and Don'ts) — so Claude Design and any `design.md`-compatible tool can lint, diff, and export it directly. Also see [`AGENTS.md`](./AGENTS.md) for machine-oriented rules when working through a coding agent.
 
-**Reference components** live in [`examples/`](./examples) — `Button`, `Card`, `Input`, and a composed `PageTemplate` extracted directly from Figma. They consume the tokens via CSS custom properties (`var(--button/default, #4444ca)` etc.) and are the best place to pattern-match from when recreating components the system doesn't already ship.
+**Primary source of truth:** `semantic.tokens.json` references the primitives and is what the component layer and live sites resolve against. `primitive.tokens.json` defines raw colour/size values; `contextual.light.tokens.json` maps semantic tokens to component roles (buttons, cards, inputs, etc.) for Light mode.
+
+**Component catalog:** [`components.md`](./components.md) lists all ~45 components Iris ships in production — atoms, molecules, organisms, templates, and the ACF-driven flexi-blocks. It's the scope you're working with.
+
+**Brand summary:** [`brands.json`](./brands.json) distills the per-brand overrides (palette, font, radius, shadow) for the 6 brands with dedicated styling — Core, Eco Experts, HearClear, ClearLiving, Expert Reviews, Lasik Eyes — so consumers don't have to parse the 500KB tokens JSON to grasp how brands differ.
+
+**Reference components** live in [`examples/`](./examples) — seven files spanning the "look" axis (Figma-extracted: `Button`, `Card`, `Input`, `PageTemplate`) and the "behaviour" axis (Blade-ported: `CtaCard`, `ProsCons`, `HighlightBox`). They consume the tokens via CSS custom properties (`var(--button/default, #4444ca)` etc.) and are the best place to pattern-match from when recreating components the system doesn't already ship.
 
 ## Live examples
 
