@@ -1,0 +1,113 @@
+{
+  "$schema": "./brands.schema.json",
+  "description": "Per-brand overrides that sit on top of the Core MVF palette. Each brand inherits the full semantic layer and only overrides the roles listed here. Values extracted from the live iris theme at wp-content/themes/iris/assets/styles/vars/*.scss (Iris v4.7).",
+  "core": {
+    "label": "MVF / Core",
+    "fontFamily": "Inter",
+    "primary": {
+      "lightest": "#fbfbfe",
+      "lighter":  "#f3f3fc",
+      "light":    "#eeeefb",
+      "default":  "#4444ca",
+      "dark":     "#252590",
+      "darker":   "#0f0f4b",
+      "darkest":  "#08082b"
+    },
+    "interactive": "inherits-primary",
+    "surface": {
+      "lightest": "#fbfbfe",
+      "lighter":  "#f3f3fc",
+      "light":    "#eeeefb",
+      "default":  "#c2c2f1"
+    },
+    "cardShadow": "0 12px 16px -8px rgb(0 0 0 / 12%)",
+    "avatarRadius": "8px",
+    "heroCtaRadius": "16px",
+    "tagRadius": "4px",
+    "notes": "System defaults. All other brands diverge by overriding a small subset of these values."
+  },
+  "brands": {
+    "eco-experts": {
+      "label": "Eco Experts",
+      "liveSite": "https://www.theecoexperts.co.uk/",
+      "fontFamily": "Be Vietnam Pro",
+      "primary":    { "default": "#053c5e", "dark": "#042b43", "lightest": "#e6ecef", "lighter": "#8ca5b5", "light": "#587c93", "darker": "#042B43", "darkest": "#021927" },
+      "interactive":{ "default": "#04ab49", "dark": "#037934", "lightest": "#e6f7ed", "lighter": "#b1e5c7", "light": "#8cd8ab", "darker": "#025e28", "darkest": "#02481f" },
+      "surface":    { "default": "#def2fb", "light": "#e8f6fc", "lighter": "#f0f9fd", "lightest": "#fafdfe" },
+      "secondary":  { "solar": "#ffb000", "water": "#008cff" },
+      "tertiary":   { "heat": "#ff553e", "sand": "#fdf4e5", "sky": "#ceecf9" },
+      "avatarRadius": "full",
+      "cardShadow": "0 12px 16px -8px rgb(0 0 0 / 12%)",
+      "notes": "Navy/green split. Green is the interactive/CTA colour; navy is the primary surface/typography colour. Solar/water/heat tertiaries appear in block illustrations."
+    },
+    "hearclear": {
+      "label": "HearClear",
+      "liveSite": "https://www.hearclear.com/",
+      "fontFamily": "Manrope",
+      "primary":    { "default": "#2d3350", "dark": "#202439", "lightest": "#eaebee", "lighter": "#9ea1af", "light": "#72768a", "darker": "#191c2c", "darkest": "#131522" },
+      "interactive":{ "default": "#1c7d68", "dark": "#14594a", "lightest": "#e8f2f0", "lighter": "#b9d7d0", "light": "#97c3ba", "darker": "#0f4539", "darkest": "#0c352c" },
+      "surface":    { "default": "#fae6d7", "light": "#fceee4", "lighter": "#fdf3ed", "lightest": "#fefbf9" },
+      "secondary":  { "lightBlue": "#2c58a3", "red": "#f0695e", "orange": "#ff8b3e", "yellow": "#ffc740" },
+      "tertiary":   { "lightPink": "#f9c1bc", "skin": "#f8d9c4" },
+      "avatarRadius": "full",
+      "cardShadow": "none",
+      "typographyWeights": { "body": 500, "heading": 800, "display": 800, "link": 700 },
+      "notes": "Warm peach surfaces, teal interactive colour, Manrope with heavier weights. Cards are flat (no shadow)."
+    },
+    "clearliving": {
+      "label": "ClearLiving",
+      "liveSite": "https://www.clearliving.com/",
+      "fontFamily": "Public Sans",
+      "primary":    { "default": "#081e47", "dark": "#071b41", "lightest": "#b2b9c6", "lighter": "#8d98aa", "light": "#5a6884", "darker": "#061532", "darkest": "#041127" },
+      "interactive":{ "default": "#e80b54", "dark": "#a5083c", "lightest": "#fde7ee", "lighter": "#f8b3ca", "light": "#f05c8c", "darker": "#80062e", "darkest": "#610523" },
+      "surface":    { "default": "#badcf4", "light": "#d1e8f8", "lighter": "#e8f3fb", "lightest": "#f5fbff" },
+      "secondary":  { "cornflower": "#198adb", "orange": "#e88d2c", "seaform": "#27b5a6", "violet": "#803284" },
+      "avatarRadius": "full",
+      "cardShadow": "none",
+      "cardBorderRadius": "8px",
+      "cardImageRadius": "8px",
+      "heroCtaRadius": "8px",
+      "typographyWeights": { "body": 500, "heading": 800, "display": 800, "link": 700 },
+      "notes": "Navy + magenta. Tighter corner radii (8px) than Core (16px). Flat cards. Sky/orange/seaform/violet accents for product categories."
+    },
+    "expert-reviews": {
+      "label": "Expert Reviews",
+      "liveSite": "—",
+      "fontFamily": "Plus Jakarta Sans",
+      "primary":    { "default": "#32052D", "dark": "#240420", "lightest": "#EBE6EA", "lighter": "#BFB2BE", "light": "#A18C9E", "darker": "#240420", "darkest": "#1C0319" },
+      "interactive":{ "default": "#850049", "dark": "#5E0034", "lightest": "#F3E6ED", "lighter": "#D9B0C7", "light": "#AD5485", "darker": "#490028", "darkest": "#38001F" },
+      "surface":    { "default": "#FFF0EA", "light": "#FFF4F0", "lighter": "#FFF8F5", "lightest": "#FFFDFC" },
+      "tertiary":   { "default": "#FF6000", "dark": "#E85700", "lightest": "#FFEFE6", "lighter": "#FFCEB0", "light": "#FF9454", "darker": "#B54400", "darkest": "#8C3500" },
+      "avatarRadius": "full",
+      "cardShadow": "none",
+      "cardImageRadius": "8px",
+      "heroCtaRadius": "8px",
+      "tagRadius": "0px",
+      "inputRadius": "4px",
+      "notes": "Deep plum primary, magenta interactive, orange tertiary for accent/star-rating. Square tags. Dark header (primary on primary)."
+    },
+    "lasik-eyes": {
+      "label": "Lasik Eyes",
+      "liveSite": "—",
+      "fontFamily": "Open Sans",
+      "primary":    { "default": "#0D489E", "dark": "#093370", "lightest": "#F0F3F7", "lighter": "#90ABD2", "light": "#3D6DB1", "darker": "#072857", "darkest": "#051E42" },
+      "interactive":{ "default": "#CE3272", "dark": "#A02759", "lightest": "#FCEBF2", "lighter": "#F6C1D7", "light": "#E85F97", "darker": "#7C1E45", "darkest": "#5F1735" },
+      "surface":    { "default": "#FFF1E8", "light": "#FFFCF4", "lighter": "#FFFBEE", "lightest": "#FFFBEE" },
+      "avatarRadius": "full",
+      "cardShadow": "0 12px 16px -8px rgb(0 0 0 / 12%)",
+      "heroCta":    { "strap": "#CE3272", "strapText": "#FFF1E8", "strapRadio": "#CE3272" },
+      "notes": "Royal-blue primary with pink interactive. Cream surface. Hero CTA strap uses the interactive colour (inverted pattern vs. other brands)."
+    }
+  },
+  "additionalBrandsInTokens": [
+    "Amazon",
+    "Connect Hearing",
+    "FindPro USA",
+    "GoWizard",
+    "MVF",
+    "Startups",
+    "Techco",
+    "WBE"
+  ],
+  "additionalBrandsNote": "These exist as token sets in semantic.tokens.json but do not have dedicated brand SCSS files in the live iris theme yet — their styling derives entirely from the Figma semantic layer."
+}
